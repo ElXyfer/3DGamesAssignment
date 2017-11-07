@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyfer3D", "Assembly-CSharp.csproj", "{6586FDA4-761D-4066-7FE0-BADF1EF55A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xyfer3D", "Assembly-CSharp-Editor.csproj", "{2E8FD9D6-C51E-D153-C13D-CEDD298FEEA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6586FDA4-761D-4066-7FE0-BADF1EF55A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6586FDA4-761D-4066-7FE0-BADF1EF55A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6586FDA4-761D-4066-7FE0-BADF1EF55A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6586FDA4-761D-4066-7FE0-BADF1EF55A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8FD9D6-C51E-D153-C13D-CEDD298FEEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8FD9D6-C51E-D153-C13D-CEDD298FEEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8FD9D6-C51E-D153-C13D-CEDD298FEEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8FD9D6-C51E-D153-C13D-CEDD298FEEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
