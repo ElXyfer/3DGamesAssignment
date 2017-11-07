@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Ring.ma
-//Last modified: Tue, Nov 07, 2017 12:52:13 AM
+//Last modified: Tue, Nov 07, 2017 02:59:11 AM
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DA293D0B-8844-2345-F2EF-9C9E961DF0C4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.0241415876886037 15.871465883368662 41.905222881181238 ;
-	setAttr ".r" -type "double3" -20.738352729603491 1.3999999999999433 1.9884402456475308e-16 ;
+	setAttr ".t" -type "double3" 27.377330558668483 17.180302171904767 31.053485935777744 ;
+	setAttr ".r" -type "double3" -22.538352729601243 41.399999999998649 2.1200558225532816e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D0B3BDE8-5B40-2985-02CA-5D9D6064B207";
 	setAttr -k off ".v" no;
