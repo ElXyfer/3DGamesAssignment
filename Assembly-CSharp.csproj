@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6586FDA4-761D-4066-7FE0-BADF1EF55A11}</ProjectGuid>
+    <ProjectGuid>{2176594D-2B78-E849-7B55-38315C818F1A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,7 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Inventory.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
+     <Compile Include="Assets\GameItem.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\Scripts\AttachToBody.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\Scripts\ChangeDisplay.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\Scripts\RotateAround.cs" />
@@ -129,6 +131,7 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
+     <None Include="Assets\_Shaders\Texture.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\IMPORTED ASSETS\LowpolyVegetationPackFree\Readme.txt" />
@@ -141,6 +144,7 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\_Shaders\Flat shader.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
@@ -155,6 +159,7 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\_Shaders\Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
