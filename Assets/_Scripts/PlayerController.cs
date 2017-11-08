@@ -21,8 +21,11 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKeyDown("space")){
 			anim.SetBool("isAttacking", true);
-			anim.SetBool("isWalking", false);
-			anim.SetBool("isRunning", false);
+//			anim.SetBool("isWalking", false);
+//			anim.SetBool("isRunning", false);
+			anim.SetTrigger("Attacking");
+		} else {
+			anim.SetBool("isAttacking", false);
 		}
 		
 		float translation = Input.GetAxis("Vertical") * speed;
