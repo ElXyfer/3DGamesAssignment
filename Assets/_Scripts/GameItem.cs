@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameItem : MonoBehaviour {
 
-	private Animator anim;
+    Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,9 @@ public class GameItem : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 
+        if(this.gameObject.CompareTag("coin")){
+            Destroy(this.gameObject);
+        }
 
 	}
 

@@ -3,32 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
-
-    public GameObject enemy;
-    public float EnemyHealth;
+    
+    Animator anim;
+    private EnemyHealth enemyHealth;
     public float speed;
     public float rotSpeed;
-	public Transform playerTarget;
+    public Transform playerTarget;
 	public Transform head;
 
 	string state = "patrol";
-	public GameObject[] waypoints;
 	int currentWP = 0;
 	float accuracyWP = 2.0f;
-    Animator anim;
-
-
+    public GameObject[] waypoints;
 
 	// Use this for initialization
-	void Start () {
-		anim = GetComponent<Animator>();
+	void Awake () {
+        anim = GetComponent<Animator>();
+        enemyHealth = GetComponent<EnemyHealth>();
 	}
 	
 	// Update is called once per frame
     void Update()
     {
 
-        if (EnemyHealth <= 0) return;
+        if (enemyHealth.EnemyHealthPoints <= 0) return;
 
         // work out the direction the player is to gaurd
         Vector3 direction = playerTarget.position - this.transform.position;
@@ -75,8 +73,8 @@ public class EnemyController : MonoBehaviour {
             // calculate rotaion to the player and start turning
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-            // if close, attack
-            if (direction.magnitude > 1.5)
+            // if out of range keep persuing 
+            if (direction.magnitude > 2)
             {
                 this.transform.Translate(0, 0, Time.deltaTime * speed);
                 anim.SetBool("isWalking", true);
@@ -97,36 +95,6 @@ public class EnemyController : MonoBehaviour {
             state = "patrol";
         }
     } // End update
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "weapon")
-        {
-            EnemyHealth --;
-            anim.SetBool("isHit", true);
-            //anim.SetBool("isAttacking", false);
-            //anim.SetBool("isWalking", false);
-            //anim.SetBool("isHit", false);
-            //anim.SetBool("isIdle", false);
-            print("Hit" + EnemyHealth);
-            if(EnemyHealth < 0) {
-                print("ADD SOUND TO THIS !");
-                anim.SetBool("isDead", true);
-                anim.SetBool("isAttacking", false);
-                anim.SetBool("isWalking", false);
-                anim.SetBool("isHit", false);
-                anim.SetBool("isIdle", false);
-
-                Invoke("EnemyDefeated", 5);
-            }
-        }
-    }
-
-    void EnemyDefeated()
-    {
-        Destroy(enemy);
-    }
-
 
 } // End main class
 		

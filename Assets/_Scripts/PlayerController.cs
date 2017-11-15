@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	private Animator anim;
+    ///public float PlayerHealth;
 	public float speed;
 	public float runningSpeed;
 	public float rotationSpeed = 100.0f;
 	public bool isMoving = false;
-	// commit test
 
+    private Animator anim;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
