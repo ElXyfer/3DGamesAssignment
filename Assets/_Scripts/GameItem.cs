@@ -22,6 +22,11 @@ public class GameItem : MonoBehaviour {
             Destroy(this.gameObject);
         }
 
+        if (this.gameObject.CompareTag("Item"))
+        {
+            Destroy(this.gameObject);
+        }
+
 	}
 
 
