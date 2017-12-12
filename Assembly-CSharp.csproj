@@ -52,21 +52,25 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\AnimalController.cs" />
+     <Compile Include="Assets\_Scripts\createRadarObject.cs" />
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
+     <Compile Include="Assets\_Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\_Scripts\GameItem.cs" />
-     <Compile Include="Assets\_Scripts\HitDetection.cs" />
+     <Compile Include="Assets\_Scripts\GroundCheck.cs" />
      <Compile Include="Assets\_Scripts\Inventory.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
+     <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\_Scripts\Radar.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Animals\- Scripts\AnimationControl.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Animals\- Scripts\DeathButtonControl.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Animals\- Scripts\KillSwitch.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Animals\- Scripts\PanelControll.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Animals\- Scripts\PeriodicShake.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Animals\- Scripts\Wander\Wander.cs" />
-     <Compile Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\Scripts\AttachToBody.cs" />
-     <Compile Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\Scripts\ChangeDisplay.cs" />
-     <Compile Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\Scripts\RotateAround.cs" />
-     <Compile Include="Assets\IMPORTED ASSETS\Goblin_rouge pack\Script\Goblin_ro_ctrl.cs" />
+     <Compile Include="Assets\IMPORTED ASSETS\Enemies\Script\Goblin_ro_ctrl.cs" />
+     <Compile Include="Assets\IMPORTED ASSETS\Player Models\Scripts\AttachToBody.cs" />
+     <Compile Include="Assets\IMPORTED ASSETS\Player Models\Scripts\ChangeDisplay.cs" />
+     <Compile Include="Assets\IMPORTED ASSETS\Player Models\Scripts\RotateAround.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Standard Assets\Cameras\Scripts\AutoCam.cs" />
      <Compile Include="Assets\IMPORTED ASSETS\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
@@ -175,8 +179,7 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
-     <None Include="Assets\IMPORTED ASSETS\Goblin_rouge pack\readme.txt" />
-     <None Include="Assets\_Shaders\Texture.shader" />
+     <None Include="Assets\IMPORTED ASSETS\Enemies\readme.txt" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
@@ -205,7 +208,7 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\LowPolyShader\Shaders\LowPoly.shader" />
-     <None Include="Assets\IMPORTED ASSETS\FantasyCharactersLite\readme.txt" />
+     <None Include="Assets\IMPORTED ASSETS\Player Models\readme.txt" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
@@ -217,7 +220,6 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\_Shaders\Flat shader.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
@@ -242,6 +244,7 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+     <None Include="Assets\_Shaders\MyShader.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
@@ -265,7 +268,6 @@
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
-     <None Include="Assets\_Shaders\Diffuse.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\IMPORTED ASSETS\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />

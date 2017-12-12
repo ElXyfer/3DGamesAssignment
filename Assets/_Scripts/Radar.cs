@@ -15,7 +15,7 @@ public class RadarObject
 public class Radar : MonoBehaviour {
 
     public Transform playerPosition;
-    float mapScale = 2.0f;
+    float mapScale = 3.0f;
 
     public static List<RadarObject> radObjects = new List<RadarObject>();
 
@@ -62,6 +62,10 @@ public class Radar : MonoBehaviour {
             Vector3 radarPos = (ro.owner.transform.position - playerPosition.position);
 
             float distanceToObject = Vector3.Distance(playerPosition.position, ro.owner.transform.position) * mapScale;
+            if(distanceToObject > 100f) {
+
+                distanceToObject = 100f;
+            }
 
             // calculates the angle
             float deltay = Mathf.Atan2(radarPos.x, radarPos.z) * Mathf.Rad2Deg - 270 - playerPosition.eulerAngles.y;
