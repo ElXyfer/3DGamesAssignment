@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public float runningSpeed;
 	public float rotationSpeed = 100.0f;
 	public bool isMoving = false;
+    float distToGround = 0.75f;
 
     private Animator anim;
 	// Use this for initialization
@@ -57,4 +58,17 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("isIdle", true);
         }
 	}
+
+    void OnTriggerEnter(Collider hC)
+    {
+        if (hC.gameObject.tag == "heightChecker" && !isGrounded())
+        {
+            print("Dead");
+        }
+    }
+
+    bool isGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, distToGround);
+    }
 }
