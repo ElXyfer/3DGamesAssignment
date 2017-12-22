@@ -56,7 +56,6 @@
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
      <Compile Include="Assets\_Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\_Scripts\GameItem.cs" />
-     <Compile Include="Assets\_Scripts\GroundCheck.cs" />
      <Compile Include="Assets\_Scripts\Inventory.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
