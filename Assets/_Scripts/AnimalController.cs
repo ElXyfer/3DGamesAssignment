@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class AnimalController : MonoBehaviour {
 
 	public Transform player;
-	public Transform head;
 	Animator anim;
 
 	string state = "patrol";
@@ -14,10 +12,12 @@ public class AnimalController : MonoBehaviour {
 	public float rotSpeed = 0.2f;
 	public float speed = 1.5f;
 	float accuracyWP = 2.0f;
+    NavMeshAgent agent;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame
@@ -28,7 +28,7 @@ public class AnimalController : MonoBehaviour {
 
 		// looking at angle between player and guard on y axis
 		direction.y = 0;
-		float angle = Vector3.Angle(direction, head.forward);
+        float angle = Vector3.Angle(direction, player.forward);
 
 			if(state == "patrol" && waypoints.Length > 0)
 			{ 
@@ -44,14 +44,17 @@ public class AnimalController : MonoBehaviour {
 				
 				}
 
+
+            agent.SetDestination(waypoints[currentWP].transform.position);
+
 					// rotate guard to waypoint
-					direction = waypoints[currentWP].transform.position - transform.position;
+					//direction = waypoints[currentWP].transform.position - transform.position;
 
-					// turn guard to waypoint
-					this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotSpeed * Time.deltaTime);
+					//// turn guard to waypoint
+					//this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotSpeed * Time.deltaTime);
 
-					// move guard towards waypoint
-					this.transform.Translate(0,0, Time.deltaTime * speed);
+					//// move guard towards waypoint
+					//this.transform.Translate(0,0, Time.deltaTime * speed);
 			}
 
 		}
