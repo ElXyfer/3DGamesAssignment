@@ -26,7 +26,11 @@ public class EnemyController : MonoBehaviour {
     void Update()
     {
 
-        if (enemyHealth.EnemyHealthPoints <= 0) return;
+        if (enemyHealth.EnemyHealthPoints <= 0){
+            state = "patrol";
+            return;
+        } 
+
 
         // work out the direction the player is to gaurd
         Vector3 direction = playerTarget.position - this.transform.position;

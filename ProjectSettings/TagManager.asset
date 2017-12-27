@@ -12,6 +12,7 @@ TagManager:
   - environment
   - heightChecker
   - guardWayPoint
+  - Water
   layers:
   - Default
   - TransparentFX
