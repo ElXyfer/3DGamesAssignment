@@ -11,20 +11,42 @@ public class PlayerController : MonoBehaviour {
 	public float rotationSpeed = 100.0f;
 	public bool isMoving = false;
     public bool isSwimming = false;
+    bool canMove;
     float distToGround = 0.75f;
 
     private Animator anim;
     FloatingScript floatingScript;
+    private DialogueSystem dialogueSystem;
+
+    bool logBox;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
         floatingScript = GetComponent<FloatingScript>();
         floatingScript.enabled = false;
+
+        dialogueSystem = FindObjectOfType<DialogueSystem>();
+        canMove = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        //if(dialogueSystem.DialogBoxIsShowing == true) {
+        //    canMove = false;
+        //} else {
+        //    canMove = true;
+        //}
+        //if(canMove == false) {
+        //    anim.SetBool("isIdle", true);
+        //    anim.SetBool("isSwimming", false);
+        //    anim.SetBool("isWalking", false);
+        //    anim.SetBool("isRunning", false);
+        //    anim.SetBool("isAttacking", false);
+        //    return;
+        //} 
+
        
 		if (Input.GetKeyDown("space")){
 			anim.SetBool("isAttacking", true);
