@@ -5,12 +5,10 @@ using UnityEngine;
 public class GameItem : MonoBehaviour {
 
     Animator anim;
-    private DialogueTrigger dTrigger;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
-        dTrigger = GetComponent<DialogueTrigger>();
 	}
 
 	void OnTriggerEnter(Collider item) {
@@ -21,12 +19,6 @@ public class GameItem : MonoBehaviour {
 		}
 
         if(this.gameObject.CompareTag("coin")){
-            Destroy(this.gameObject);
-        }
-
-        if (this.gameObject.CompareTag("Item"))
-        {
-            dTrigger.TriggerDialogue();
             Destroy(this.gameObject);
         }
 
