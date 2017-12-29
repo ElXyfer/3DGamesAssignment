@@ -22,8 +22,6 @@ public class PlayerHealth : MonoBehaviour {
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         currentHealth = startingHealth;
-
-
 	}
 	
     void OnTriggerEnter(Collider other)

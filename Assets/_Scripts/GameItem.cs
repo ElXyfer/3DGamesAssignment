@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class GameItem : MonoBehaviour {
 
-    Animator anim;
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator>();
 	}
 
 	void OnTriggerEnter(Collider item) {
@@ -19,6 +17,10 @@ public class GameItem : MonoBehaviour {
 		}
 
         if(this.gameObject.CompareTag("coin")){
+            Destroy(this.gameObject);
+        }
+        if (this.gameObject.tag == "Item")
+        {
             Destroy(this.gameObject);
         }
 

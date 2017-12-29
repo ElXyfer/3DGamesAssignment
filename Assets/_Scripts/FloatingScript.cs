@@ -21,7 +21,7 @@ public class FloatingScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        //this.enabled = false;
+        this.enabled = false;
         forceFactor = 1.0f - ((transform.position.y - waterLevel) / waterThreshold);
 
         if(forceFactor > 0f) {
