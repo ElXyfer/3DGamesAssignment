@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public float runningSpeed;
     public float fastSwimmingSpeed;
 	public float rotationSpeed = 100.0f;
+    float swimSpeed = 2;
 	public bool isMoving = false;
     public bool isSwimming = false;
     bool canMove;
@@ -16,7 +17,6 @@ public class PlayerController : MonoBehaviour {
 
     private Animator anim;
     FloatingScript floatingScript;
-    private DialogueSystem dialogueSystem;
 
     bool logBox;
 
@@ -25,8 +25,6 @@ public class PlayerController : MonoBehaviour {
 		anim = GetComponent<Animator>();
         floatingScript = GetComponent<FloatingScript>();
         floatingScript.enabled = false;
-
-        dialogueSystem = FindObjectOfType<DialogueSystem>();
         canMove = true;
 	}
 	

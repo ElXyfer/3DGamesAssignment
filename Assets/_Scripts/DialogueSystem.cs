@@ -3,157 +3,115 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueSystem : MonoBehaviour {
+public class DialogueSystem : MonoBehaviour
+{
 
     public Text nameText;
     public Text dialogueText;
-    public int sentenceCount;
-
-    private Queue<string> setences;
-    private Queue<string> secondRoundSetences;
-
 
     public Animator anim;
-    public bool DialogBoxIsShowing = false;
-
     public GameObject player;
+    public GameObject btn;
+
+    Dialogue tsDialogue;
     PlayerController playerController;
+    Inventory inventory;
+    Button contBtn;
 
+    int clickCounter;
+    int clickCountIndex;
+    int sentenceCount;
+    int secondSentencesCount;
+    int midSentencesCount;
 
-
+    bool DialogBoxIsShowing = false;
+    bool ActiveQuest = false;
 
     private void Start()
     {
 
         DialogBoxIsShowing = false;
-        setences = new Queue<string>();
-        secondRoundSetences = new Queue<string>();
         playerController = player.GetComponent<PlayerController>();
+        contBtn = btn.GetComponent<Button>();
+        contBtn.onClick.AddListener(() => ButtonClick());
+        inventory = player.GetComponent<Inventory>();
+
+    }
+
+    public void ButtonClick()
+    {
+        clickCounter++;
+        clickCountIndex = clickCounter - 1;
+
+       
+        print(clickCounter);
+
+        if (ActiveQuest == false)
+        {
+            if (clickCountIndex < sentenceCount)
+            {
+                dialogueText.text = tsDialogue.setences[clickCountIndex];
+                if (clickCountIndex == tsDialogue.setences.Length - 1)
+                {
+                    anim.SetBool("isOpen", false);
+                    //MyDialogue.InteractionCounter++;
+                    ActiveQuest = true;
+                    clickCounter = 0;
+                    if(MyDialogue.InteractionCounter == 2 && Inventory.coinAmount > 50) {
+                       print("You can enter"); 
+                    }
+                }
+            }
+        }
+
+        if(ActiveQuest == true && !inventory.QuestItemAquired) {
+            if (clickCountIndex < midSentencesCount)
+            {
+                dialogueText.text = tsDialogue.midRoundSentences[clickCountIndex];
+                if (clickCountIndex == tsDialogue.midRoundSentences.Length - 1)
+                {
+                    anim.SetBool("isOpen", false);
+                    clickCounter = 0;
+                }
+            }
+        }
+
+        if(inventory.QuestItemAquired == true) {
+            if (clickCountIndex < secondSentencesCount)
+            {
+                dialogueText.text = tsDialogue.secondRoundSetences[clickCountIndex];
+                if (clickCountIndex == tsDialogue.secondRoundSetences.Length - 1)
+                {
+                    anim.SetBool("isOpen", false);
+                    ActiveQuest = false;
+                    inventory.QuestItemAquired = false;
+                    clickCounter = 0;
+                }
+            }
+        }
+
 
 
     }
 
-
-
-
-    //public void ChooseDialoguePath(Dialogue dialogue) {
-    //    if(DialogueTrigger.NumberOfInteractions <= 0) {
-    //        StartSecondRoundDialogue(dialogue);
-    //    } else {
-    //        StartDialogue(dialogue);
-    //    }
-    //}
 
 
     public void StartDialogue(Dialogue dialogue)
     {
-        anim.SetBool("isOpen", true);
+        tsDialogue = dialogue;
         DialogBoxIsShowing = true;
-
-        if (DialogBoxIsShowing == true)
-        {
-            /// playerController.PlayerUnableToMove();
-        }
-        nameText.text = dialogue.name;
-
-        setences.Clear();
-
-        foreach (string sentence in dialogue.setences)
-        {
-            setences.Enqueue(sentence);
-        }
-
-        //foreach (string sentence2 in dialogue.secondRoundSetences)
-        //{
-        //    secondRoundSetences.Enqueue(sentence2);
-        //}
-
-        print("Current interaction is " + DialogueTrigger.NumberOfInteractions);
-        //if(DialogueTrigger.NumberOfInteractions == 0) {
-        //    DisplayNextSentence();
-        //} else if(DialogueTrigger.NumberOfInteractions == 1) {
-        //    contBtn.onClick.RemoveAllListeners();
-        //    contBtn.onClick.AddListener(() => StartSecondRoundDialogue(dialogue));
-
-        //}
-
-
-
-        DisplayNextSentence();
-
-            //if(DialogueTrigger.NumberOfInteractions >= 1) {
-            ////contBtn.onClick.RemoveAllListeners();
-            ////contBtn.onClick.AddListener(() => StartSecondRoundDialogue(dialogue));
-            //DisplaySecondRoundSentence();
-            //} else {
-            //    DisplayNextSentence();
-            //}
-
-       
-    }
-
-    public void DisplayNextSentence()
-    {
-        print("Sentences count is " + setences.Count);
-        if (setences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-
-        dialogueText.text = "";
-
-        string sentence = setences.Dequeue();
-
-        dialogueText.text = sentence;
-
-        //StopAllCoroutines();
-        //StartCoroutine(TypeSentence(sentence));
-    }
-
-    public void StartSecondRoundDialogue(Dialogue dialogue) {
         anim.SetBool("isOpen", true);
-        DialogBoxIsShowing = true;
 
         nameText.text = dialogue.name;
 
-        foreach (string sentence in dialogue.secondRoundSetences)
-        {
-            secondRoundSetences.Enqueue(sentence);
-        }
+        sentenceCount = tsDialogue.setences.Length;
 
-        DisplaySecondRoundSentence(); 
+        secondSentencesCount = tsDialogue.secondRoundSetences.Length;
+
+        midSentencesCount = tsDialogue.secondRoundSetences.Length;
 
     }
 
-    public void DisplaySecondRoundSentence() 
-    {       
-        print("Second round setences count is " + secondRoundSetences.Count);
-        if (secondRoundSetences.Count == 16)
-        {
 
-            EndDialogue();
-            return;
-        }
-
-        dialogueText.text = "";
-
-        string sentence2 = secondRoundSetences.Dequeue();
-
-        dialogueText.text = sentence2;
-    }
-
-    //IEnumerator TypeSentence (string sentence){
-    //    dialogueText.text = "";
-    //    foreach(char letter in sentence.ToCharArray()){
-    //        dialogueText.text += letter;
-    //        yield return null;
-    //    }
-    //}
-
-    void EndDialogue(){
-        anim.SetBool("isOpen", false);
-        DialogBoxIsShowing = false;
-    }
 
 }

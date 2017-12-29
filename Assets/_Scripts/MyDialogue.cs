@@ -5,47 +5,35 @@ using UnityEngine.UI;
 
 public class MyDialogue : MonoBehaviour {
 
-    public Dialogue dialogue;
-
-    bool DisplayDialogueBox = false;
-    bool ActiveQuest = false;
-
-    public Text nameText;
-    public Text dialogueText;
-
     public Animator anim;
+    public Dialogue dialogue;
+    public static int InteractionCounter;
+    public GameObject myRadar;
+    Radar radar;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
+
+    }
+
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-
     void OnTriggerEnter(Collider other){
-        if(this.gameObject.tag == "Item") {
-            print("Im on it");
-
-            FindObjectOfType<TalkingSystem>().StartDialogue(dialogue);
-            //DisplayDialogueBox = true;
-            //anim.SetBool("isOpen", true);
-
-            //nameText.text = dialogue.name;
-
-            //dialogueText.text = dialogue.setences[0];
+        if(this.gameObject.tag == "MissionNPC") {
+            FindObjectOfType<DialogueSystem>().StartDialogue(dialogue);
+            InteractionCounter = 2;
+            myRadar.SetActive(true);
         }
 
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (this.gameObject.tag == "Item")
+        if (this.gameObject.tag == "MissionNPC")
         {
-            DisplayDialogueBox = false;
             anim.SetBool("isOpen", false);
         }
     }

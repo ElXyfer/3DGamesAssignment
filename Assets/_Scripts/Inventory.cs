@@ -11,12 +11,16 @@ public class Inventory : MonoBehaviour {
 	GameObject weaponGUI;
 
     public Text coinText;
-    private int count = 0;
+    public static int coinAmount;
+
+    public bool QuestItemAquired;
+
 
 
 	// Use this for initialization
 	void Start () {
         SetCoinText();
+        FindObjectOfType<DialogueSystem>();
 	}
 
 	void OnTriggerEnter(Collider item) {
@@ -28,14 +32,20 @@ public class Inventory : MonoBehaviour {
 		}
 
         if(item.gameObject.CompareTag("coin")){
-            count++;
+            coinAmount = 60;
             SetCoinText();
         }
+
+        if(item.gameObject.CompareTag("Item") && MyDialogue.InteractionCounter >= 1) {
+            QuestItemAquired = true;
+        }
+
+
 
 	}
 
     void SetCoinText(){
-        coinText.text = "Coins: " + count.ToString();
+        coinText.text = "Coins: " + coinAmount.ToString();
     }
 
 	

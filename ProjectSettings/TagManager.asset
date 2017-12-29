@@ -15,6 +15,7 @@ TagManager:
   - Water
   - NPC
   - MissionNPC
+  - Rader
   layers:
   - Default
   - TransparentFX
