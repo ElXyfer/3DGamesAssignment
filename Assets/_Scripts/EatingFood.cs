@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Eat : MonoBehaviour {
+public class EatingFood : MonoBehaviour {
+
 
     public void EatFood()
     {
@@ -13,8 +14,8 @@ public class Eat : MonoBehaviour {
         {
             int tcount = itemClickedOn - 1;
             this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
-            FindObjectOfType<Slider>().value += 10;
-            //healthSlider.value += 5;
+            PlayerHealth.playerInstance.AddHealth();
+
         } else {
             Destroy(this.gameObject);
         }

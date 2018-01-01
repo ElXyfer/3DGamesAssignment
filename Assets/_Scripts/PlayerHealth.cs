@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
+    public static PlayerHealth playerInstance;
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
-    public static int currentHealth;                                   // The current health the player has.
+    [SerializeField] float currentHealth;                                   // The current health the player has.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
@@ -24,6 +25,7 @@ public class PlayerHealth : MonoBehaviour {
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         currentHealth = startingHealth;
         playerController = GetComponent<PlayerController>();
+        playerInstance = this;
 	}
 	
     void OnTriggerEnter(Collider other)
@@ -32,6 +34,12 @@ public class PlayerHealth : MonoBehaviour {
         {
             EnemyAttack();
         } 
+      
+    }
+
+    public void AddHealth() {
+        currentHealth += 10;
+        UpdateHealthSlider();
     }
 
 	// Update is called once per frame
@@ -50,6 +58,7 @@ public class PlayerHealth : MonoBehaviour {
 
         // Reset the damaged flag.
         damaged = false;
+
     }
 
     public void TakeDamage (int amount)
@@ -61,7 +70,7 @@ public class PlayerHealth : MonoBehaviour {
         currentHealth -= amount;
 
         // Set the health bar's value to the current health.
-        healthSlider.value = currentHealth;
+        UpdateHealthSlider();
 
         // If the player has lost all it's health and the death flag hasn't been set yet...
         if(currentHealth <= 0 && !isDead)
@@ -85,7 +94,13 @@ public class PlayerHealth : MonoBehaviour {
         // Set the death flag so this function won't be called again.
         isDead = true;
         playerController.onSpawn();
+        currentHealth = startingHealth / 2;
+        UpdateHealthSlider();
 
-    }   
+    }
+
+    void UpdateHealthSlider(){
+        healthSlider.value = currentHealth;
+    }
 
 }

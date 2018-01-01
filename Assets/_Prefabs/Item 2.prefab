@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 224077805306669992}
   - component: {fileID: 222215309115048318}
   - component: {fileID: 114534964414212136}
-  - component: {fileID: 114463521404851214}
   - component: {fileID: 114589673180967330}
+  - component: {fileID: 114476969669158676}
   m_Layer: 5
   m_Name: Item 2
   m_TagString: banana
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Text: '1
 
 '
---- !u!114 &114463521404851214
+--- !u!114 &114476969669158676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1500746062938946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e6756bc4efab46a1bf66de11765978e, type: 3}
+  m_Script: {fileID: 11500000, guid: d948231c01c87452f8a468a333aadf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114534964414212136
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114463521404851214}
+      - m_Target: {fileID: 114476969669158676}
         m_MethodName: EatFood
         m_Mode: 1
         m_Arguments:

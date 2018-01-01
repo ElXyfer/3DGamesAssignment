@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour {
 
     public Text coinText;
     public static int coinAmount;
-
+    //[SerializeField] float coinAmount;
     public bool QuestItemAquired;
 
 
@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour {
 		}
 
         if(item.gameObject.CompareTag("coin")){
-            coinAmount = 60;
+            coinAmount++;
             SetCoinText();
         }
 

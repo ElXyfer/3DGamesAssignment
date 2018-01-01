@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
     bool logBox;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         anim = GetComponent<Animator>();
         inventory = GetComponent<Inventory>();
         playerHealth = GetComponent<PlayerHealth>();
@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour {
         else {
             anim.SetBool("isWalking", false);
             anim.SetBool("isIdle", true);
+            isMoving = false;
         }
 
 
@@ -118,9 +119,6 @@ public class PlayerController : MonoBehaviour {
 
         // half players coins
         Inventory.coinAmount = Inventory.coinAmount / 2;
-
-        // add health back up to half of the starting health 
-        playerHealth.healthSlider.value = playerHealth.startingHealth / 2;
 
         //update coin text
         inventory.SetCoinText();
