@@ -16,6 +16,10 @@ public class Inventory : MonoBehaviour {
     public bool QuestItemAquired;
 
 
+    public GameObject inventoryPanel;
+    public GameObject[] inventoryIcons;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -40,17 +44,41 @@ public class Inventory : MonoBehaviour {
             QuestItemAquired = true;
         }
 
+        foreach (Transform child in inventoryPanel.transform)
+        {
+            if (child.gameObject.tag == item.gameObject.tag)
+            {
+                string c = child.Find("Text").GetComponent<Text>().text;
+                int tcount = System.Int32.Parse(c) + 1;
+                child.Find("Text").GetComponent<Text>().text = "" + tcount;
+                return;
+            }
 
 
-	}
+        }
 
-    void SetCoinText(){
+        GameObject gameItem;
+        if (item.gameObject.tag == "apple")
+        {
+            gameItem = Instantiate(inventoryIcons[0]);
+            gameItem.transform.SetParent(inventoryPanel.transform);
+        }
+        else if (item.gameObject.tag == "banana")
+        {
+            gameItem = Instantiate(inventoryIcons[1]);
+            gameItem.transform.SetParent(inventoryPanel.transform);
+        }
+        else if (item.gameObject.tag == "fish")
+        {
+            gameItem = Instantiate(inventoryIcons[2]);
+            gameItem.transform.SetParent(inventoryPanel.transform);
+        }
+
+    }
+
+    public void SetCoinText()
+    {
         coinText.text = "Coins: " + coinAmount.ToString();
     }
 
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

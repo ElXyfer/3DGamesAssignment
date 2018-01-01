@@ -54,6 +54,7 @@ public class DialogueSystem : MonoBehaviour
                 if (clickCountIndex == tsDialogue.setences.Length - 1)
                 {
                     anim.SetBool("isOpen", false);
+                    DialogBoxIsShowing = true;
                     //MyDialogue.InteractionCounter++;
                     ActiveQuest = true;
                     clickCounter = 0;
@@ -71,6 +72,7 @@ public class DialogueSystem : MonoBehaviour
                 if (clickCountIndex == tsDialogue.midRoundSentences.Length - 1)
                 {
                     anim.SetBool("isOpen", false);
+                    DialogBoxIsShowing = true;
                     clickCounter = 0;
                 }
             }
@@ -84,6 +86,7 @@ public class DialogueSystem : MonoBehaviour
                 {
                     anim.SetBool("isOpen", false);
                     ActiveQuest = false;
+                    DialogBoxIsShowing = true;
                     inventory.QuestItemAquired = false;
                     clickCounter = 0;
                 }

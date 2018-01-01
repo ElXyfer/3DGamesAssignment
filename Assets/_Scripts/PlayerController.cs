@@ -5,32 +5,37 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     ///public float PlayerHealth;
-	public float speed;
-	public float runningSpeed;
+    public float speed;
+    public float runningSpeed;
     public float fastSwimmingSpeed;
-	public float rotationSpeed = 100.0f;
+    public float rotationSpeed = 100.0f;
     float swimSpeed = 2;
-	public bool isMoving = false;
+    public bool isMoving = false;
     public bool isSwimming = false;
     bool canMove;
     float distToGround = 0.75f;
 
-    private Animator anim;
+    Animator anim;
     FloatingScript floatingScript;
+    Inventory inventory;
+    PlayerHealth playerHealth;
+
 
     bool logBox;
 
-	// Use this for initialization
-	void Start () {
-		anim = GetComponent<Animator>();
+    // Use this for initialization
+    void Start () {
+        anim = GetComponent<Animator>();
+        inventory = GetComponent<Inventory>();
+        playerHealth = GetComponent<PlayerHealth>();
         floatingScript = GetComponent<FloatingScript>();
         floatingScript.enabled = false;
         canMove = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
+    }
+    
+    // Update is called once per frame
+    void Update () {
+        
         //if(dialogueSystem.DialogBoxIsShowing == true) {
         //    canMove = false;
         //} else {
@@ -46,16 +51,16 @@ public class PlayerController : MonoBehaviour {
         //} 
 
        
-		if (Input.GetKeyDown("space")){
-			anim.SetBool("isAttacking", true);
-//			anim.SetBool("isWalking", false);
-//			anim.SetBool("isRunning", false);
-			anim.SetTrigger("Attacking");
-		} else {
-			anim.SetBool("isAttacking", false);
-		}
-		
-		float translation = Input.GetAxis("Vertical") * speed;
+        if (Input.GetKeyDown("space")){
+            anim.SetBool("isAttacking", true);
+//            anim.SetBool("isWalking", false);
+//            anim.SetBool("isRunning", false);
+            anim.SetTrigger("Attacking");
+        } else {
+            anim.SetBool("isAttacking", false);
+        }
+        
+        float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         translation *= Time.deltaTime;
         rotation *= Time.deltaTime;
@@ -63,8 +68,8 @@ public class PlayerController : MonoBehaviour {
         transform.Rotate(0, rotation, 0);
 
         if(translation != 0) {
-			isMoving = true;
-			if(isMoving == true){
+            isMoving = true;
+            if(isMoving == true){
                 PlayerIsMoving();
             }
 
@@ -76,18 +81,26 @@ public class PlayerController : MonoBehaviour {
 
         } 
         else {
-			anim.SetBool("isWalking", false);
-			anim.SetBool("isIdle", true);
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", true);
         }
 
 
-	}
+    }
 
     void OnTriggerEnter(Collider hC)
     {
         if (hC.gameObject.tag == "heightChecker" && !isGrounded())
         {
             print("Dead");
+            anim.SetBool("isFalling", true);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isAttacking", false);
+            anim.SetBool("isSwimming", false);
+            anim.SetBool("isWalking", false);
+
+            Invoke("onSpawn", 5);
         }
 
         if (hC.gameObject.tag == "Water")
@@ -98,11 +111,27 @@ public class PlayerController : MonoBehaviour {
 
     }
 
+    public void onSpawn(){
+
+        // respwan to check point
+        transform.position = CheckPointManager.checkPointPosition;
+
+        // half players coins
+        Inventory.coinAmount = Inventory.coinAmount / 2;
+
+        // add health back up to half of the starting health 
+        playerHealth.healthSlider.value = playerHealth.startingHealth / 2;
+
+        //update coin text
+        inventory.SetCoinText();
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Water")
         {
             isSwimming = true;
+
         }
         
     }
@@ -123,6 +152,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("isRunning", false);
         anim.SetBool("isAttacking", false);
         anim.SetBool("isSwimming", false);
+        anim.SetBool("isFalling", false);
 
         if (Input.GetKey(KeyCode.Z))
         {
@@ -141,6 +171,8 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("isIdle", false);
         anim.SetBool("isRunning", false);
         anim.SetBool("isAttacking", false);
+        anim.SetBool("isFalling", false);
+
     }
 
     public void PlayerUnableToMove(){
