@@ -11,15 +11,7 @@ public class GameItem : MonoBehaviour {
 
 	void OnTriggerEnter(Collider item) {
 		
-		if(this.gameObject.tag == "weapon"){
-			//anim.SetBool("PickingUp", true);
-			Destroy(this.gameObject);
-		}
-
-        if(this.gameObject.CompareTag("coin")){
-            Destroy(this.gameObject);
-        }
-        if (this.gameObject.tag == "Item")
+        if (this.gameObject.tag == "weapon" || this.gameObject.tag == "Item" || this.gameObject.tag == "apple" || this.gameObject.tag == "banana" || this.gameObject.tag == "fish" || this.gameObject.tag == "coin")
         {
             Destroy(this.gameObject);
         }

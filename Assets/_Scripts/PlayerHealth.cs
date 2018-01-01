@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
-    public int currentHealth;                                   // The current health the player has.
+    public static int currentHealth;                                   // The current health the player has.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour {
 
     EnemyHealth enemyHealth;
     GameObject enemy;
+    PlayerController playerController;
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
 
@@ -22,15 +23,15 @@ public class PlayerHealth : MonoBehaviour {
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         currentHealth = startingHealth;
+        playerController = GetComponent<PlayerController>();
 	}
 	
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "EnemyWeapon")
         {
-            print("HIT !" + currentHealth);
             EnemyAttack();
-        }
+        } 
     }
 
 	// Update is called once per frame
@@ -83,6 +84,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         // Set the death flag so this function won't be called again.
         isDead = true;
+        playerController.onSpawn();
 
     }   
 

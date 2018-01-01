@@ -16,6 +16,9 @@ TagManager:
   - NPC
   - MissionNPC
   - Rader
+  - apple
+  - banana
+  - fish
   layers:
   - Default
   - TransparentFX
