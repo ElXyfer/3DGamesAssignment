@@ -183,7 +183,7 @@ Transform:
   - {fileID: 1878952553}
   - {fileID: 378153109}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &10408815
 Prefab:
@@ -940,6 +940,12 @@ Prefab:
       propertyPath: m_Name
       value: Lime Goblin LV1
       objectReference: {fileID: 0}
+    - target: {fileID: 114812875864309712, guid: 4f93468c04bbb4a468abb31bca7a5bc1,
+        type: 2}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1147126231698862, guid: 049c16d55860e40628940fa3fb745da6,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f93468c04bbb4a468abb31bca7a5bc1, type: 2}
   m_IsPrefabParent: 0
@@ -2610,7 +2616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &186243224
 Prefab:
@@ -4000,7 +4006,7 @@ Transform:
   - {fileID: 2093780560}
   - {fileID: 1597707228}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &293117507
 Prefab:
@@ -5121,7 +5127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4624915088464818, guid: 526fbeeaa56854de6bcd96ee6f0a30b1, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114446163091352850, guid: 526fbeeaa56854de6bcd96ee6f0a30b1,
         type: 2}
@@ -8137,7 +8143,7 @@ Transform:
   - {fileID: 766327190}
   - {fileID: 790075278}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &587734852
 Prefab:
@@ -8218,7 +8224,7 @@ Transform:
   - {fileID: 271936420}
   - {fileID: 601042698}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &589357975 stripped
 Transform:
@@ -10015,7 +10021,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725772287
 GameObject:
@@ -10975,7 +10981,7 @@ Transform:
   - {fileID: 2000384660}
   - {fileID: 1045497202}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &780331433
 Prefab:
@@ -11121,7 +11127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &782768266
 MonoBehaviour:
@@ -12665,7 +12671,7 @@ Transform:
   - {fileID: 1904359540}
   - {fileID: 1164804927}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &890686686
 Prefab:
@@ -13490,7 +13496,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4722245764040526, guid: 0d9eb53229fd4e4428e17f457310aada, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d9eb53229fd4e4428e17f457310aada, type: 2}
@@ -14829,7 +14835,7 @@ Transform:
   - {fileID: 1024884368}
   - {fileID: 115840973}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1018206808
 Prefab:
@@ -14926,7 +14932,7 @@ Transform:
   - {fileID: 1909099770}
   - {fileID: 1316790267}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1024884367
 GameObject:
@@ -15147,7 +15153,7 @@ Transform:
   - {fileID: 1743371294}
   - {fileID: 93729076}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1030430507
 Prefab:
@@ -15292,7 +15298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1035995595
 MonoBehaviour:
@@ -16044,48 +16050,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 430562, guid: 9178e3418bf98364ab9a6114360f9e8c, type: 2}
   m_PrefabInternal: {fileID: 1065609074}
---- !u!1001 &1070449586
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 83.78542
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 6.813959
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 648.29767
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4647523537843026, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1082558366
 Prefab:
   m_ObjectHideFlags: 0
@@ -23889,7 +23853,7 @@ Transform:
   - {fileID: 1827635406}
   - {fileID: 866340487}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1330535241
 Prefab:
@@ -28052,7 +28016,7 @@ Transform:
   m_Children:
   - {fileID: 382832937}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1593253967
 Prefab:
@@ -28151,6 +28115,10 @@ Prefab:
       propertyPath: m_Name
       value: Blue Goblin LV3
       objectReference: {fileID: 0}
+    - target: {fileID: 185802, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 14341562, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 2}
     - {fileID: 11413532, guid: c1d92bdd55f8c154c957dcd4f7cfe669, type: 2}
@@ -28184,7 +28152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallet: {fileID: 601042697}
-  coin: {fileID: 1402881812798490, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
+  coin: {fileID: 1147126231698862, guid: 049c16d55860e40628940fa3fb745da6, type: 2}
   EnemyHealthPoints: 5
   attackDamage: 10
 --- !u!114 &1597707233
@@ -28492,7 +28460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1618994651
 Prefab:
@@ -29365,7 +29333,7 @@ Transform:
   m_LocalScale: {x: 100, y: 1, z: 250}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666576148 stripped
 GameObject:
@@ -36796,7 +36764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4722245764040526, guid: 0d9eb53229fd4e4428e17f457310aada, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1830278637828938, guid: 0d9eb53229fd4e4428e17f457310aada, type: 2}
       propertyPath: m_Name
@@ -37230,7 +37198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 359.196, y: -0.0000006524434, z: 0.0000004148814}
 --- !u!95 &1981094164
 Animator:
@@ -38859,7 +38827,7 @@ Transform:
   - {fileID: 1388986100}
   - {fileID: 147539288}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2053294131
 Prefab:
@@ -39621,6 +39589,10 @@ Prefab:
       propertyPath: m_Name
       value: Orange Goblin LV2
       objectReference: {fileID: 0}
+    - target: {fileID: 150878, guid: f8e5b2f39b57ccf45ae8321cac39d04e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 14348168, guid: f8e5b2f39b57ccf45ae8321cac39d04e, type: 2}
     - {fileID: 11400180, guid: f8e5b2f39b57ccf45ae8321cac39d04e, type: 2}
@@ -39707,7 +39679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallet: {fileID: 601042697}
-  coin: {fileID: 1402881812798490, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
+  coin: {fileID: 1147126231698862, guid: 049c16d55860e40628940fa3fb745da6, type: 2}
   EnemyHealthPoints: 5
   attackDamage: 10
 --- !u!136 &2093780558
