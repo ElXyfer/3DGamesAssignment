@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         SetCoinText();
         FindObjectOfType<DialogueSystem>();
 	}

@@ -11,10 +11,10 @@ public class Dialogue {
     public string[] setences;
 
     [TextArea(3, 10)]
-    public string[] midRoundSentences;
+    public string[] secondRoundSetences;
 
     [TextArea(3, 10)]
-    public string[] secondRoundSetences;
+    public string[] thirdRoundSetences;
 
 
 }
