@@ -19,6 +19,7 @@ TagManager:
   - apple
   - banana
   - fish
+  - Gate
   layers:
   - Default
   - TransparentFX

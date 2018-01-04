@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4331091110529564}
   - component: {fileID: 135672766729903740}
+  - component: {fileID: 114866328293482714}
   m_Layer: 0
   m_Name: Coin
   m_TagString: coin
@@ -390,6 +391,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500923762779550}
   m_Mesh: {fileID: 4300000, guid: 8bb0e4683a5a34556bf3e14cef7bc1e9, type: 3}
+--- !u!114 &114866328293482714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147126231698862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a927e78baa846f9aaeff799747b0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135672766729903740
 SphereCollider:
   m_ObjectHideFlags: 1
