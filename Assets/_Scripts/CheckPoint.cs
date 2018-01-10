@@ -6,7 +6,7 @@ public class CheckPoint : MonoBehaviour {
 
     bool triggered;
 
-    private void Start()
+    void Start()
     {
         triggered = false;
     }
@@ -14,7 +14,7 @@ public class CheckPoint : MonoBehaviour {
     {
         if(!triggered){
             if(other.tag == "Player"){
-                print("Triggered");
+                print("Check point entered");
                 Trigger();
             }
         }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     ///public float PlayerHealth;
+    /// 
+
     public float speed;
     public float runningSpeed;
     public float fastSwimmingSpeed;
@@ -14,11 +16,14 @@ public class PlayerController : MonoBehaviour {
     public bool isSwimming = false;
     bool canMove;
     float distToGround = 0.75f;
+    public GameObject sceneManager;
 
     Animator anim;
     FloatingScript floatingScript;
     Inventory inventory;
     PlayerHealth playerHealth;
+    MySceneManager mySceneManager;
+
 
 
     bool logBox;
@@ -29,6 +34,7 @@ public class PlayerController : MonoBehaviour {
         inventory = GetComponent<Inventory>();
         playerHealth = GetComponent<PlayerHealth>();
         floatingScript = GetComponent<FloatingScript>();
+        mySceneManager = sceneManager.GetComponent<MySceneManager>();
         floatingScript.enabled = false;
         canMove = true;
     }
@@ -101,28 +107,19 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("isSwimming", false);
             anim.SetBool("isWalking", false);
 
-            Invoke("onSpawn", 5);
+            playerHealth.Death();
+
         }
 
-        if (hC.gameObject.tag == "Water")
-        {
-            isSwimming = true;
-        }
+        //if (hC.gameObject.tag == "Water")
+        //{
+        //    isSwimming = true;
+        //}
 
 
     }
 
-    public void onSpawn(){
 
-        // respwan to check point
-        transform.position = CheckPointManager.checkPointPosition;
-
-        // half players coins
-        Inventory.coinAmount = Inventory.coinAmount / 2;
-
-        //update coin text
-        inventory.SetCoinText();
-    }
 
     private void OnTriggerStay(Collider other)
     {

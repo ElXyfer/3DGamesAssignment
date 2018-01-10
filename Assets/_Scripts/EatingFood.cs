@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class EatingFood : MonoBehaviour {
 
+    GameItem gameItem;
+    public GameObject gameItemSound;
+
+    private void Awake()
+    {
+        gameItem = gameItemSound.GetComponent<GameItem>();
+    }
 
     public void EatFood()
     {
@@ -14,6 +21,7 @@ public class EatingFood : MonoBehaviour {
         {
             int tcount = itemClickedOn - 1;
             this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
+            gameItem.AppleBite();
             PlayerHealth.playerInstance.AddHealth();
 
         } else {
