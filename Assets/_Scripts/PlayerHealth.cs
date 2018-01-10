@@ -10,12 +10,15 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] float currentHealth;                                   // The current health the player has.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
-    public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
+    public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
     EnemyHealth enemyHealth;
     GameObject enemy;
     PlayerController playerController;
+    MySceneManager mySceneManager;
+    public GameObject sceneManager;
+
     bool isDead;                                                // Whether the player is dead.
     bool damaged;                                               // True when the player gets damaged.
 
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Awake () {
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         enemyHealth = enemy.GetComponent<EnemyHealth>();
+        mySceneManager = sceneManager.GetComponent<MySceneManager>();
         currentHealth = startingHealth;
         playerController = GetComponent<PlayerController>();
         playerInstance = this;
@@ -89,14 +93,14 @@ public class PlayerHealth : MonoBehaviour {
     }
 
 
-    void Death ()
+    public void Death ()
     {
         // Set the death flag so this function won't be called again.
         isDead = true;
-        playerController.onSpawn();
+
         currentHealth = startingHealth / 2;
         UpdateHealthSlider();
-
+        mySceneManager.LoadDeathScene();
     }
 
     void UpdateHealthSlider(){
