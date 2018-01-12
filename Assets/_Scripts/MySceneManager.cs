@@ -20,8 +20,6 @@ public class MySceneManager : MonoBehaviour {
         
         mysound = GetComponent<AudioSource>();
 
-
-        
 	}
 	
 	// Update is called once per frame
@@ -30,8 +28,9 @@ public class MySceneManager : MonoBehaviour {
 
         if (currentScene.name == "MainMenu")
         {
-            //buttons[0].onClick.AddListener(() => LoadGameScene());
-            //buttons[1].onClick.AddListener(() => LoadSettingsScene());
+            buttons[0].onClick.AddListener(() => LoadGameScene());
+            buttons[1].onClick.AddListener(() => LoadSettingsScene());
+           
         }
 
         if (currentScene.name == "Death")
@@ -42,23 +41,33 @@ public class MySceneManager : MonoBehaviour {
             }
         }
 
+        if (currentScene.name == "Settings")
+        {
+            buttons[0].onClick.AddListener(() => LoadGameScene());
+        }
+
+
+
         
     }
 
 
     public void LoadGameScene() {
+        mysound.Play();
             SceneManager.LoadScene("Game");
 
     }
 
     public void LoadDeathScene()
     {
+        mysound.Play();
         SceneManager.LoadScene("Death");
     }
 
 
     public void LoadSettingsScene()
     {
+        mysound.Play();
         SceneManager.LoadScene("Settings");
     }
 

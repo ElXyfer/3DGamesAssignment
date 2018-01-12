@@ -20,6 +20,10 @@ TagManager:
   - banana
   - fish
   - Gate
+  - FazerGuard
+  - CaveOldMan
+  - Cog
+  - Help
   layers:
   - Default
   - TransparentFX
