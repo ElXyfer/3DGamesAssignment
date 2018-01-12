@@ -15,7 +15,6 @@ public class PlayerHealth : MonoBehaviour {
 
     EnemyHealth enemyHealth;
     GameObject enemy;
-    PlayerController playerController;
     MySceneManager mySceneManager;
     public GameObject sceneManager;
 
@@ -28,7 +27,6 @@ public class PlayerHealth : MonoBehaviour {
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         mySceneManager = sceneManager.GetComponent<MySceneManager>();
         currentHealth = startingHealth;
-        playerController = GetComponent<PlayerController>();
         playerInstance = this;
 	}
 	
@@ -65,13 +63,13 @@ public class PlayerHealth : MonoBehaviour {
 
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage (int attackAmount)
     {
         // Set the damaged flag so the screen will flash.
         damaged = true;
 
         // Reduce the current health by the damage amount.
-        currentHealth -= amount;
+        currentHealth -= attackAmount;
 
         // Set the health bar's value to the current health.
         UpdateHealthSlider();

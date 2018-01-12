@@ -24,7 +24,6 @@ public class CharacterWalkAround : MonoBehaviour {
 		// work out the direction the player is to gaurd
 		Vector3 direction = player.position - this.transform.position;
 
-		// looking at angle between player and guard on y axis
 		direction.y = 0;
         float angle = Vector3.Angle(direction, player.forward);
 
@@ -33,26 +32,16 @@ public class CharacterWalkAround : MonoBehaviour {
 				// start walking
 				anim.SetBool("isWalking", true);
 
-
-				// checks distance between guard and waypoint
+				// checks distance between npc and waypoint
 				if(Vector3.Distance(waypoints[currentWP].transform.position, transform.position) < accuracyWP)
 				{
-					// goes through waypoints
+					// goes through waypoints randomly
 					currentWP = Random.Range(0,waypoints.Length);
 				
 				}
 
-
             agent.SetDestination(waypoints[currentWP].transform.position);
 
-					// rotate guard to waypoint
-					//direction = waypoints[currentWP].transform.position - transform.position;
-
-					//// turn guard to waypoint
-					//this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotSpeed * Time.deltaTime);
-
-					//// move guard towards waypoint
-					//this.transform.Translate(0,0, Time.deltaTime * speed);
 			}
 
 		}

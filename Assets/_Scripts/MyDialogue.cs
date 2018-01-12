@@ -22,19 +22,27 @@ public class MyDialogue : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other){
-        if(this.gameObject.tag == "MissionNPC") {
-            FindObjectOfType<DialogueSystem>().StartDialogue(dialogue);
-            InteractionCounter = 2;
+        if(this.gameObject.tag == "CaveOldMan") {
+            FindDialogueSystem();
             myRadar.SetActive(true);
+        }
+        if(this.gameObject.tag == "FazerGuard") {
+            FindDialogueSystem();
+            InteractionCounter = 2;
+           
         }
 
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (this.gameObject.tag == "MissionNPC")
+        if (this.gameObject.tag == "CaveOldMan" || this.gameObject.tag == "FazerGuard")
         {
             anim.SetBool("isOpen", false);
         }
+    }
+
+    void FindDialogueSystem() {
+        FindObjectOfType<DialogueSystem>().StartDialogue(dialogue);
     }
 }

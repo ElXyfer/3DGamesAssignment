@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     Inventory inventory;
     PlayerHealth playerHealth;
     MySceneManager mySceneManager;
+    AudioSource myAudio;
 
 
 
@@ -30,7 +31,9 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
+        
         anim = GetComponent<Animator>();
+        myAudio = GetComponent<AudioSource>();
         inventory = GetComponent<Inventory>();
         playerHealth = GetComponent<PlayerHealth>();
         floatingScript = GetComponent<FloatingScript>();
@@ -41,31 +44,6 @@ public class PlayerController : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        
-        //if(dialogueSystem.DialogBoxIsShowing == true) {
-        //    canMove = false;
-        //} else {
-        //    canMove = true;
-        //}
-        //if(canMove == false) {
-        //    anim.SetBool("isIdle", true);
-        //    anim.SetBool("isSwimming", false);
-        //    anim.SetBool("isWalking", false);
-        //    anim.SetBool("isRunning", false);
-        //    anim.SetBool("isAttacking", false);
-        //    return;
-        //} 
-
-       
-        if (Input.GetKeyDown("space")){
-            anim.SetBool("isAttacking", true);
-//            anim.SetBool("isWalking", false);
-//            anim.SetBool("isRunning", false);
-            anim.SetTrigger("Attacking");
-        } else {
-            anim.SetBool("isAttacking", false);
-        }
-        
         float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         translation *= Time.deltaTime;
@@ -84,7 +62,6 @@ public class PlayerController : MonoBehaviour {
                 PlayerIsSwimming();
             }
 
-
         } 
         else {
             anim.SetBool("isWalking", false);
@@ -92,7 +69,15 @@ public class PlayerController : MonoBehaviour {
             isMoving = false;
         }
 
-
+        if (Input.GetKeyDown("space"))
+        {
+            anim.SetBool("isAttacking", true);
+            myAudio.Play();
+        }
+        else
+        {
+            anim.SetBool("isAttacking", false);
+        }
     }
 
     void OnTriggerEnter(Collider hC)
@@ -111,12 +96,10 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-        //if (hC.gameObject.tag == "Water")
-        //{
-        //    isSwimming = true;
-        //}
-
-
+        if (hC.gameObject.tag == "Water")
+        {
+            isSwimming = true;
+        }
     }
 
 

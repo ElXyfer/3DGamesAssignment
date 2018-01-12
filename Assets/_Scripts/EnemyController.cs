@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour {
             this.transform.Translate(0, 0, Time.deltaTime * speed);
         }
 
-        // if distance between gaurd and player is < 10 and the angle is < 90 Degre or persuing is active 
+        // if distance between eny player is < 10 and the angle is < 90 Degre or persuing is active 
         if (Vector3.Distance(playerTarget.position, this.transform.position) < 10 && (angle < 90 || state == "persuing"))
         {
             // start walking and chasing
