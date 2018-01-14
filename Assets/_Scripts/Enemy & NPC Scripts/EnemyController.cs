@@ -28,22 +28,17 @@ public class EnemyController : MonoBehaviour {
     void Update()
     {
 
-        if (enemyHealth.EnemyHealthPoints <= 0)
-        {
-            state = "patrol";
-            return;
-        }
-
-
         // work out the direction the player is to gaurd
         Vector3 direction = playerTarget.position - this.transform.position;
-
-        // looking at angle between player and guard on y axis
         direction.y = 0;
+        // looking at angle between player and guard on y axis
+       
         float angle = Vector3.Angle(direction, head.forward);
 
         if (state == "patrol" && waypoints.Length > 0)
         {
+
+
             // start walking
             anim.SetBool("isWalking", true);
             anim.SetBool("isIdle", false);
@@ -68,7 +63,7 @@ public class EnemyController : MonoBehaviour {
         }
 
         // if distance between gaurd and player is < 10 and the angle is < 90 Degre or persuing is active 
-        if (Vector3.Distance(playerTarget.position, this.transform.position) < 10 && (angle < 90 || state == "persuing"))
+        if (Vector3.Distance(playerTarget.position, this.transform.position) < 10 && (angle < 180 || state == "persuing"))
         {
             // start walking and chasing
             state = "persuing";
@@ -77,7 +72,7 @@ public class EnemyController : MonoBehaviour {
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
             // if out of range keep persuing 
-            if (direction.magnitude > 2)
+            if (direction.magnitude > 1)
             {
                 this.transform.Translate(0, 0, Time.deltaTime * speed);
                 anim.SetBool("isWalking", true);
@@ -96,7 +91,10 @@ public class EnemyController : MonoBehaviour {
         else
         {
             state = "patrol";
-        }
+            anim.SetBool("isWalking", true);
+            anim.SetBool("isAttacking", false);
+            anim.SetBool("isHit", false);
+            anim.SetBool("isIdle", false);        }
     } // End update
 
 } // End main class
