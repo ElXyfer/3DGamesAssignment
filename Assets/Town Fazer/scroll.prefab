@@ -11,12 +11,14 @@ GameObject:
   - component: {fileID: 3385208}
   - component: {fileID: 2369458}
   - component: {fileID: 6434316}
+  - component: {fileID: 114844354223778844}
+  - component: {fileID: 114078001686032034}
   m_Layer: 0
   m_Name: scroll
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &494322
 Transform:
@@ -24,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178230}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.88901716, z: -0, w: 0.45787397}
+  m_LocalPosition: {x: 5.499133, y: 1.3549094, z: -1.606204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,3 +98,28 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178230}
   m_IsPrefabParent: 1
+--- !u!114 &114078001686032034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225577c4d389441ebb7f67e180d1738b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 114307152309231738, guid: cdcea1832008c43dfafdf090ef1e1bba, type: 2}
+--- !u!114 &114844354223778844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a927e78baa846f9aaeff799747b0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySounds:
+  - {fileID: 8300000, guid: e4c125005baf34d6bb306a029abaaf86, type: 3}

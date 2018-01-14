@@ -906,7 +906,6 @@ MonoBehaviour:
   - {fileID: 1159293383}
   sounds:
   - {fileID: 8300000, guid: 1cca387fb4a5943f2862e932fe85a0fa, type: 3}
-  - {fileID: 0}
 --- !u!4 &2143809785
 Transform:
   m_ObjectHideFlags: 0
