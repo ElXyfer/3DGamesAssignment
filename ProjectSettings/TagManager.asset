@@ -13,17 +13,19 @@ TagManager:
   - heightChecker
   - guardWayPoint
   - Water
-  - NPC
-  - MissionNPC
   - Rader
   - apple
   - banana
   - fish
   - Gate
-  - FazerGuard
-  - CaveOldMan
-  - Cog
+  - NoReplys
+  - Teleportation
+  - ReplyNPC
+  - ReplyNPC2
   - Help
+  - OldFather
+  - scroll
+  - CryingGirl
   layers:
   - Default
   - TransparentFX

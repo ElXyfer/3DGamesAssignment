@@ -1525,7 +1525,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463719671209760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.5, y: -41.991, z: 246.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4444179095801824}
@@ -2447,7 +2447,7 @@ Animator:
   m_GameObject: {fileID: 1463719671209760}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 741f73214c8e59045b42ebac4be91444, type: 3}
-  m_Controller: {fileID: 9100000, guid: 83107c796bf2ec348afb5e040bea51c8, type: 2}
+  m_Controller: {fileID: 22100000, guid: c4533781dc93945c998241fcce50d837, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallet: {fileID: 0}
-  coin: {fileID: 1402881812798490, guid: 6fb3cbd71ac604690ba8e8d43c5c7fe5, type: 2}
+  coin: {fileID: 1147126231698862, guid: 049c16d55860e40628940fa3fb745da6, type: 2}
   EnemyHealthPoints: 5
   attackDamage: 10
 --- !u!135 &135674618038459868
