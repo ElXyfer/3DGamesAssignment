@@ -3,7 +3,7 @@ guid: 4dab2446b0ee1b44c8affe3a93051e07
 timeCreated: 1496872568
 licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: joint100
     100002: joint101
@@ -100,9 +100,9 @@ ModelImporter:
     400090: spider2
     400092: //RootNode
     4300000: spider2
-    7400000: Walk
-    7400002: Idle
-    7400004: Scared
+    7400000: Spider_Walk
+    7400002: Spider_Idle
+    7400004: Spider_Scared
     9500000: //RootNode
     13700000: spider2
   materials:
@@ -127,9 +127,10 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Spider_Walk
       takeName: Take 001
       firstFrame: 1
       lastFrame: 19
@@ -251,7 +252,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Spider_Idle
       takeName: Take 001
       firstFrame: 30
       lastFrame: 104
@@ -373,7 +374,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Scared
+      name: Spider_Scared
       takeName: Take 001
       firstFrame: 110
       lastFrame: 199
@@ -500,7 +501,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -516,7 +520,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+    normalCalculationMode: 0
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

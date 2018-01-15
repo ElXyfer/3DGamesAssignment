@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UserInterfaceController : MonoBehaviour {
 
     public GameObject HelpMenu;
+    public GameObject volumet;
     // Use this for initialization
     AudioSource mysound;
 
@@ -25,6 +26,7 @@ public class UserInterfaceController : MonoBehaviour {
 
     public void ToggleChanged(bool isOn) {
         HelpMenu.SetActive(isOn);
+        volumet.SetActive(true);
         mysound.Play();
     }
 }
