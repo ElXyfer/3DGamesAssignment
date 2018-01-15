@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 
     Animator anim;
+    public GameObject[] buttons;
      
 	// Use this for initialization
 	void Awake () {
         anim = GetComponent<Animator>();
+        buttons[0].SetActive(false);
+        buttons[1].SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -20,6 +23,8 @@ public class PauseMenu : MonoBehaviour {
             if (Time.timeScale == 1)
             {
                 anim.SetTrigger("Pause");
+                buttons[0].SetActive(true);
+                buttons[1].SetActive(true);
                 Invoke("timeScalePause", 3);
             }
 
