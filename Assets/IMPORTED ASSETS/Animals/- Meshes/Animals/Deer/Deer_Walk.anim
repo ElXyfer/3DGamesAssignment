@@ -99668,28 +99668,32 @@ AnimationClip:
   - time: 0.41666666
     functionName: Walking
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: Walking
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.6666666
     functionName: Walking
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.3333333
     functionName: Walking
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

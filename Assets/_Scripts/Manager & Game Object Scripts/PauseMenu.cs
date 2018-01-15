@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour {
         anim = GetComponent<Animator>();
         buttons[0].SetActive(false);
         buttons[1].SetActive(false);
+        buttons[2].SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -25,6 +26,7 @@ public class PauseMenu : MonoBehaviour {
                 anim.SetTrigger("Pause");
                 buttons[0].SetActive(true);
                 buttons[1].SetActive(true);
+                buttons[2].SetActive(true);
                 Invoke("timeScalePause", 3);
             }
 
