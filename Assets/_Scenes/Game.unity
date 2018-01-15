@@ -3749,6 +3749,7 @@ MonoBehaviour:
   buttons:
   - {fileID: 857540464}
   - {fileID: 463727923}
+  - {fileID: 1354791286}
 --- !u!1001 &182886029
 Prefab:
   m_ObjectHideFlags: 0
@@ -23257,50 +23258,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134208369}
---- !u!1 &1134288252 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
-    type: 2}
-  m_PrefabInternal: {fileID: 1164506141}
---- !u!114 &1134288253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1134288252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf44c5238300643f2a98e0ecd18846b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1280964663}
-  waypoints:
-  - {fileID: 1937467522}
-  - {fileID: 729658303}
-  - {fileID: 1047117367}
-  - {fileID: 2073615220}
-  - {fileID: 1778158741}
---- !u!195 &1134288258
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1134288252}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &1136583118
 GameObject:
   m_ObjectHideFlags: 0
@@ -24066,41 +24023,61 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+    - target: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1280964663}
+    - target: {fileID: 0}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1937467522}
+    - target: {fileID: 0}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 729658303}
+    - target: {fileID: 0}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1047117367}
+    - target: {fileID: 0}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2073615220}
+    - target: {fileID: 0}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1778158741}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1280964663}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: wanderRange
-      value: 16.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003674643367374, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1937467522}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 729658303}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: turnSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1047117367}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: showGizmos
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82645965520743322, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2073615220}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
-    - {fileID: 114003674643367374, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
-    - {fileID: 114353642240258996, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
-    - {fileID: 82645965520743322, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1778158741}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1164506142 stripped
@@ -32372,7 +32349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  runningSpeed: 7
+  runningSpeed: 50
   fastSwimmingSpeed: 4
   rotationSpeed: 150
   isMoving: 0
@@ -36180,35 +36157,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
-        type: 2}
-      propertyPath: wanderRange
-      value: 12.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003674643367374, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
       propertyPath: m_Name
       value: Deer (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
         type: 2}
-      propertyPath: showGizmos
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114985471980567456, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
-    - {fileID: 114003674643367374, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
-    - {fileID: 82645965520743322, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
-    - {fileID: 114353642240258996, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1280964663}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+        type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1778158741}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+        type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 2073615220}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+        type: 2}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1047117367}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+        type: 2}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 729658303}
+    - target: {fileID: 114854184830823298, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
+        type: 2}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1937467522}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a9b422ae305e3b49aadf8ece0bfa915, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1698768857 stripped
@@ -36216,50 +36199,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4819606783095600, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
     type: 2}
   m_PrefabInternal: {fileID: 1698768856}
---- !u!1 &1698768859 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1567582185033856, guid: 3a9b422ae305e3b49aadf8ece0bfa915,
-    type: 2}
-  m_PrefabInternal: {fileID: 1698768856}
---- !u!114 &1698768860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1698768859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf44c5238300643f2a98e0ecd18846b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1280964663}
-  waypoints:
-  - {fileID: 1778158741}
-  - {fileID: 2073615220}
-  - {fileID: 1047117367}
-  - {fileID: 729658303}
-  - {fileID: 1937467522}
---- !u!195 &1698768861
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1698768859}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1699894930
 Prefab:
   m_ObjectHideFlags: 0

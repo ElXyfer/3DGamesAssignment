@@ -43,10 +43,7 @@ public class SaveGame : MonoBehaviour {
         PlayerPrefs.SetString("quest1", questManager.questStatus[0]);
         PlayerPrefs.SetString("quest2", questManager.questStatus[1]);
         PlayerPrefs.SetString("quest3", questManager.questStatus[2]);
-        //PlayerPrefs.SetFloat("cx", CheckPointManager.checkPointPosition.x);
-        //PlayerPrefs.SetFloat("cy", CheckPointManager.checkPointPosition.y);
-        //PlayerPrefs.SetFloat("cz", CheckPointManager.checkPointPosition.z);
-
+    
         if(Quit) {
             Time.timeScale = 1;
             mySceneManager.LoadMainMenuScene();
@@ -61,6 +58,5 @@ public class SaveGame : MonoBehaviour {
         questManager.questStatus[0] = PlayerPrefs.GetString("quest1", "null");
         questManager.questStatus[1] = PlayerPrefs.GetString("quest2", "null");
         questManager.questStatus[2] = PlayerPrefs.GetString("quest3", "null");
-
     }
 }
