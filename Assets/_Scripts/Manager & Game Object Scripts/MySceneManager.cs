@@ -19,7 +19,7 @@ public class MySceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        anim = myGameObjects[0].GetComponent<Animator>();
+        
 
         mysound = GetComponent<AudioSource>();
         Scene currentScene = SceneManager.GetActiveScene();
@@ -36,9 +36,9 @@ public class MySceneManager : MonoBehaviour {
         }
 
         if(currentScene.name == "Game") {
-            buttons[0].onClick.AddListener(() => ResumeGame());
+            anim = myGameObjects[0].GetComponent<Animator>();
 
-           // buttons[1].onClick.AddListener(() => LoadSettingsScene());
+            buttons[0].onClick.AddListener(() => ResumeGame());
 
             buttons[2].onClick.AddListener(() => LoadMainMenuScene());
         }

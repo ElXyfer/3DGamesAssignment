@@ -31,7 +31,6 @@ public class CharacterWalkAround : MonoBehaviour {
 			{ 
 				// start walking
             anim.SetBool("isWalking", true);
-            anim.SetBool("isIdle", false);
 
 				// checks distance between npc and waypoint
 				if(Vector3.Distance(waypoints[currentWP].transform.position, transform.position) < accuracyWP)
