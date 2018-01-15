@@ -17,6 +17,9 @@ public class MySceneManager : MonoBehaviour {
     public GameObject[] myGameObjects;
     Animator anim;
 
+
+    public int NewGame;
+
 	// Use this for initialization
 	void Start () {
         
@@ -27,7 +30,7 @@ public class MySceneManager : MonoBehaviour {
         if (currentScene.name == "MainMenu")
         {
             buttons[0].onClick.AddListener(() => LoadGameScene());
-            buttons[1].onClick.AddListener(() => LoadSettingsScene());
+            buttons[1].onClick.AddListener(() => LoadNewGameScene());
         }
 
         if (currentScene.name == "Settings")
@@ -66,7 +69,19 @@ public class MySceneManager : MonoBehaviour {
 
     public void LoadGameScene() {
             mysound.Play();
+            NewGame = 2;
+            PlayerPrefs.SetInt("NewGame", NewGame);
             SceneManager.LoadScene("Game");
+
+    }
+
+    public void LoadNewGameScene()
+    {
+        mysound.Play();
+        PlayerPrefs.DeleteAll();
+        NewGame = 1;
+        PlayerPrefs.SetInt("NewGame", NewGame);
+        SceneManager.LoadScene("Game");
 
     }
 
