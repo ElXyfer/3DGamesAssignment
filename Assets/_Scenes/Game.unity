@@ -10532,6 +10532,7 @@ MonoBehaviour:
   myGameObjects:
   - {fileID: 182328347}
   - {fileID: 627179859}
+  NewGame: 0
 --- !u!82 &507753643
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10650,6 +10651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1280964663}
+  myGameObject: {fileID: 257020549}
 --- !u!1001 &508760650
 Prefab:
   m_ObjectHideFlags: 0
