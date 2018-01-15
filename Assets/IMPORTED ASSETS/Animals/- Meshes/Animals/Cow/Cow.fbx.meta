@@ -3,7 +3,7 @@ guid: 327dc5c218e2558479e11db26a172f8d
 timeCreated: 1496863468
 licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: baseCurve2
     100002: baseCurve4
@@ -138,9 +138,9 @@ ModelImporter:
     400128: joint8
     400130: joint9
     4300000: cow
-    7400000: Walk
-    7400002: Idle
-    7400004: Eating
+    7400000: Cow_Walk
+    7400002: Cow_Idle
+    7400004: Cow_Eating
     9500000: //RootNode
     13700000: cow
   materials:
@@ -165,9 +165,10 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Cow_Walk
       takeName: Take 001
       firstFrame: 1
       lastFrame: 35
@@ -327,7 +328,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Cow_Idle
       takeName: Take 001
       firstFrame: 42
       lastFrame: 105
@@ -487,7 +488,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Eating
+      name: Cow_Eating
       takeName: Take 001
       firstFrame: 107
       lastFrame: 200
@@ -652,7 +653,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -668,7 +672,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+    normalCalculationMode: 0
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

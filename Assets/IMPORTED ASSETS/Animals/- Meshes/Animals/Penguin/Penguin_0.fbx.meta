@@ -3,7 +3,7 @@ guid: 8d2a413282ec42d44b9d497575c9c397
 timeCreated: 1496873370
 licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: joint1
     100002: joint10
@@ -84,9 +84,9 @@ ModelImporter:
     400074: penguin
     400076: //RootNode
     4300000: penguin
-    7400000: Walk
-    7400002: Idle
-    7400004: Shake
+    7400000: Penguin_Walk
+    7400002: Penguin_Idle
+    7400004: Penguin_Shake
     9500000: //RootNode
     13700000: penguin
   materials:
@@ -111,9 +111,10 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Penguin_Walk
       takeName: Take 001
       firstFrame: 1
       lastFrame: 29
@@ -219,7 +220,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Penguin_Idle
       takeName: Take 001
       firstFrame: 38
       lastFrame: 112
@@ -325,7 +326,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Shake
+      name: Penguin_Shake
       takeName: Take 001
       firstFrame: 129
       lastFrame: 203
@@ -436,7 +437,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -452,7 +456,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+    normalCalculationMode: 0
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanelControll : MonoBehaviour {
+public class PanelControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

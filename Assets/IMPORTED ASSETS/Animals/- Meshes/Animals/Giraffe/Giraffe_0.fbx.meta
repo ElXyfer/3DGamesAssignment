@@ -3,7 +3,7 @@ guid: a1a8e0a737b293c459331c3a5b2e739e
 timeCreated: 1496226998
 licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: giraffe
     100002: //RootNode
@@ -94,8 +94,8 @@ ModelImporter:
     400084: joint8
     400086: joint9
     4300000: giraffe
-    7400000: Walk
-    7400002: Idle
+    7400000: Giraffe_Walk
+    7400002: Giraffe_Idle
     9500000: //RootNode
     13700000: giraffe
   materials:
@@ -120,9 +120,10 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Giraffe_Walk
       takeName: Take 001
       firstFrame: 0
       lastFrame: 47
@@ -238,7 +239,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Giraffe_Idle
       takeName: Take 001
       firstFrame: 54
       lastFrame: 150
@@ -359,7 +360,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -375,7 +379,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+    normalCalculationMode: 0
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

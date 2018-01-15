@@ -176,7 +176,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400002, guid: e3192e250fb366f48a4634bfedf7c450, type: 3}
+  m_Motion: {fileID: 7400000, guid: 084e4decf02022e44a12d3370345d8c1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -200,7 +200,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e3192e250fb366f48a4634bfedf7c450, type: 3}
+  m_Motion: {fileID: 7400000, guid: 428756a73d39e5f4d9ff10165e380dc9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -211,7 +211,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Walk
+  m_Name: Slither
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -224,7 +224,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b989c4bbe28b9aa49b767b3bc708a938, type: 3}
+  m_Motion: {fileID: 7400000, guid: 00a21ce7842cf72428d7a5f81cd0c791, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

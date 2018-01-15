@@ -14,9 +14,13 @@ public class MySceneManager : MonoBehaviour {
  
     AudioSource mysound;
 
+    public GameObject[] myGameObjects;
+    Animator anim;
+
 	// Use this for initialization
 	void Start () {
-        
+        anim = myGameObjects[0].GetComponent<Animator>();
+
         mysound = GetComponent<AudioSource>();
         Scene currentScene = SceneManager.GetActiveScene();
 
@@ -30,7 +34,15 @@ public class MySceneManager : MonoBehaviour {
         {
             buttons[0].onClick.AddListener(() => LoadGameScene());
         }
-	}
+
+        if(currentScene.name == "Game") {
+            buttons[0].onClick.AddListener(() => ResumeGame());
+
+           // buttons[1].onClick.AddListener(() => LoadSettingsScene());
+
+            buttons[2].onClick.AddListener(() => LoadMainMenuScene());
+        }
+ 	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,11 +54,13 @@ public class MySceneManager : MonoBehaviour {
         //        LoadGameScene();
         //    }
         //}
-
-
-
-
         
+    }
+
+    public void ResumeGame() {
+        mysound.Play();
+        anim.SetTrigger("Resume");
+        Time.timeScale = 1;
     }
 
 
@@ -73,7 +87,11 @@ public class MySceneManager : MonoBehaviour {
     public void LoadSettingsScene()
     {
         mysound.Play();
-        SceneManager.LoadScene("Settings");
+        myGameObjects[1].SetActive(true);
+        buttons[0].gameObject.SetActive(false);
+        buttons[1].gameObject.SetActive(false);
+        buttons[2].gameObject.SetActive(false);
+       // SceneManager.LoadScene("Settings");
     }
 
     //void CheckSound (){

@@ -3,7 +3,7 @@ guid: 9b07f9ec326e2774da437ccfb7e6b9a0
 timeCreated: 1497256645
 licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: joint1
     100002: joint10
@@ -44,8 +44,8 @@ ModelImporter:
     400034: //RootNode
     400036: seagull
     4300000: seagull
-    7400000: Fly
-    7400002: Sitting
+    7400000: Seagul_Fly
+    7400002: Seagul_Sitting
     9500000: //RootNode
     13700000: seagull
   materials:
@@ -70,9 +70,10 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Fly
+      name: Seagul_Fly
       takeName: Take 001
       firstFrame: 1
       lastFrame: 24
@@ -138,7 +139,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Sitting
+      name: Seagul_Sitting
       takeName: Take 001
       firstFrame: 30
       lastFrame: 149
@@ -209,7 +210,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -225,7 +229,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+    normalCalculationMode: 0
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
